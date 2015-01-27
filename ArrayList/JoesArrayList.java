@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class JoesArrayList<T>{
 
-    private int count = 0; //
+    private int count = 0; 
     private int size = 5; //Initial size
     private double resizeFactor = 1.2; //Multiply size by this value during resizing.
 
@@ -22,6 +22,7 @@ public class JoesArrayList<T>{
     }
 
     public T get(int index){
+        @SuppressWarnings("unchecked") //I think doing this is OK. Add only accepts type T, so elements[] can only contain type-T elements
         return (T)this.elements[index];
     }
 
